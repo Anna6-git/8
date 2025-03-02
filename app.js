@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+const WomensDayApp = () => {
+  const [tapCount, setTapCount] = React.useState(0);
+  const [message, setMessage] = React.useState("");
+  const [hearts, setHearts] = React.useState([]);
 
-export default function WomensDayApp() {
-  const [tapCount, setTapCount] = useState(0);
-  const [message, setMessage] = useState("");
-  const [hearts, setHearts] = useState([]);
-
-  useEffect(() => {
+  React.useEffect(() => {
     if (tapCount === 3) {
       setMessage("З 8 Березня! 💋");
       generateHearts();
@@ -60,4 +58,7 @@ export default function WomensDayApp() {
       <p className="text-lg font-bold mt-4 text-green-700">{message}</p>
     </div>
   );
-}
+};
+
+// Рендеримо компонент в <div id="root">
+ReactDOM.render(<WomensDayApp />, document.getElementById("root"));
