@@ -5,7 +5,7 @@ const WomensDayApp = () => {
 
   React.useEffect(() => {
     if (tapCount === 3) {
-      setMessage("З 8 Березня! 💋");
+      setMessage("З 8 Березня! 💋<br><br>З найкращими побажаннями, ваша Аня ❤️");
       generateHearts();
     }
   }, [tapCount]);
