@@ -55,7 +55,7 @@ const WomensDayApp = () => {
       >
         8 Березня!
       </button>
-      <p className="text-lg font-bold mt-4 text-green-700">{message}</p>
+     <p className="text-lg font-bold mt-4 text-green-700" dangerouslySetInnerHTML={{ __html: message }}></p>
     </div>
   );
 };
